@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -7,15 +8,40 @@
     <title>Auth-SPA-API Prototype</title>
     <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
     <nav id="nav">
-        <div class="container" id="navContainer">
-            <!-- <h1 class="nav-header">Link Saver</h1> -->
-            <a class="menuBtn">Start</a>
-            <a class="menuBtn">Login</a>
-            <a class="menuBtn">Author</a>
+        <div id="navContainer">
+            <!-- Very important to not change menuBtn ids - functions depend on them -->
+            <a class="menuBtn" id="startPageBtn">Start</a>
+            <a class="menuBtn" id="loginPageBtn">Login</a>
+            <a class="menuBtn" id="authorPageBtn">Author</a>
         </div>
     </nav>
+    <div class="flex-page" id="startPage">
+        <div class="flex-item">
+        </div>
+        <div class="flex-item">
+            <div class="text-item">
+                <h3 class="header">Welcome</h3>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente inventore nesciunt numquam vitae
+                    tenetur veritatis temporibus vero quae omnis laborum.</p>
+            </div>
+        </div>
+    </div>
+    <div class="flex-page" id="authorPage">
+        <div class="flex-item">
+            <img class="image-item" src="portrait-author-small.png" alt="A portrait picture of the author">
+        </div>
+        <div class="flex-item">
+            <div class="text-item">
+                <h3 class="header">Author</h3>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente inventore nesciunt numquam vitae
+                    tenetur veritatis temporibus vero quae omnis laborum.</p>
+            </div>
+        </div>
+    </div>
     <script src="app.js"></script>
 </body>
+
 </html>
