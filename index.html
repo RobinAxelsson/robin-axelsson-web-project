@@ -7,6 +7,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Auth-SPA-API Prototype</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css"
+        integrity="sha512-xodZBNTC5n17Xt2atTPuE1HxjVMSvLVW9ocqUKLsCC5CXdbqCmblAshOMAS6/keqq/sMZMZ19scR4PsZChSR7A=="
+        crossorigin="" />
+    <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"
+        integrity="sha512-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0vlaXaVUearIOBhiXZ5V3ynxwA=="
+        crossorigin=""></script>
 </head>
 
 <body>
@@ -16,16 +22,29 @@
             <a class="menuBtn" id="startPageBtn">Start</a>
             <a class="menuBtn" id="loginPageBtn">Login</a>
             <a class="menuBtn" id="authorPageBtn">Author</a>
+            <a class="menuBtn" id="locationPageBtn">Location</a>
+            <a class="menuBtn" id="logoutPageBtn">Logout</a>
         </div>
     </nav>
     <div class="flex-page" id="startPage">
-        <div class="flex-item">
+        <div class="flex-item" id="osw-container">
         </div>
         <div class="flex-item">
             <div class="text-item">
                 <h3 class="header">Welcome</h3>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente inventore nesciunt numquam vitae
-                    tenetur veritatis temporibus vero quae omnis laborum.</p>
+                <p>
+                    <section>
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Officiis doloribus libero voluptatum
+                        ex
+                        illo a ut dolorem esse, totam recusandae et dolore repudiandae commodi unde nesciunt? Cupiditate
+                        ipsum praesentium magni?
+                    </section>
+                    <section>
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Officiis doloribus libero voluptatum ex
+                        illo a ut dolorem esse, totam recusandae et dolore repudiandae commodi unde nesciunt? Cupiditate
+                        ipsum praesentium magni?
+                    </section>
+                </p>
             </div>
         </div>
     </div>
@@ -37,7 +56,22 @@
             <div class="text-item">
                 <h3 class="header">Author</h3>
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente inventore nesciunt numquam vitae
-                    tenetur veritatis temporibus vero quae omnis laborum.</p>
+                    tenetur veritatiss temporibus vero quae omnis laborum.</p>
+            </div>
+        </div>
+    </div>
+    <div class="flex-page" id="loginPage">
+        <div id="mapid">
+
+        </div>
+        <div class="flex-item">
+            <div class="text-item" id="ipData">
+                <!-- <h3 class="header">API</h3> -->
+                <h1>Your location according to IP-address</h1>
+                <h2 id="ip"></h2>
+                <h2 id="lat"></h2>
+                <h2 id="long"></h2>
+                <button id="apiBtn" onclick="callApi()">Get Location</button>
             </div>
         </div>
     </div>

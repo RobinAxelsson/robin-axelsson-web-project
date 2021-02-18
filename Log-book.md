@@ -23,3 +23,15 @@ Added JS for switching pages\
 Made pages responsive\
 Choosed API - location from IP
 #
+Thursday 2021-02-18
+
+Implemented API with location from IP-address.\
+Implemented Leaflet map with widgets.\
+Try to get hold of senior advisor\
+**end of day**\
+Input from senior: my Api is meeting custumers expectations.
+#
+Thursday 2021-02-19
+
+**start of day**\
+Login service, 

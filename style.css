@@ -41,6 +41,7 @@ a:hover {
     width: 100%;
     margin-bottom: 25px, 25px, 25px, 25px;
 }
+
 .nav-header {
     color: var(--light-accent-color);
     font-size: 28px;
@@ -57,7 +58,7 @@ a:hover {
     margin: 20px, 20px, 20px, 20px;
 }
 
-.menuBtn{
+.menuBtn {
     font-size: 18px;
     color: var(--light-accent-color);
     margin: 10px;
@@ -76,41 +77,112 @@ a:hover {
     box-shadow: 0px 0px 6px var(--main-grey);
     margin: 10px;
 }
-.flex-item{
+
+.flex-item {
     flex-basis: 50%;
     height: 100%;
     max-width: 1000px;
 }
-.image-item{
+
+.image-item {
     width: 100%;
     max-width: 700px;
     border-radius: var(--border-rad);
 }
+
 @media (max-width: 700px) {
     .flex-item {
-      flex-basis: 100%;
-      max-width: 700px;
+        flex-basis: 100%;
+        max-width: 700px;
     }
-    .flex-page{
+
+    .flex-page {
         flex-flow: column;
     }
+
     p {
         font-size: small;
     }
-  }
+    .menuBtn {
+        margin: 5px;
+    }
+}
 
-.text-item{
+@media (max-width: 300px) {
+    .menuBtn {
+        font-size: x-small;
+        margin: 3px;
+    }
+}
+
+.text-item {
     width: 100%;
-    max-width:800px;
+    max-width: 800px;
     padding: 20px 20px 20px 20px;
     height: 100%;
 }
+
 p {
     font-size: medium;
     color: var(--dark-accent-color);
 }
+
 .header {
     font-size: 25px;
     margin-bottom: 10px;
     color: var(--dark-accent-color);
+}
+
+/*―――――――――――――――――――――*/
+/* API */
+/*―――――――――――――――――――――*/
+
+.button {
+    font-size: 10px;
+    border: 1px, 1px;
+    margin: 5px, 5px;
+}
+
+#loginPage {
+    flex-flow: column;
+    overflow: hidden;
+    justify-content: center;
+    align-items: center;
+}
+
+#mapid {
+    height: 500px;
+    width: 1400px;
+    margin-top: 60px;
+    align-self: center;
+    border-radius: var(--border-rad);
+}
+
+@media (max-width: 720px) {
+    #mapid {
+        height: 250px;
+        margin-top: 20px;
+    }
+
+    #ipData {
+        align-self: left;
+        font-size: smaller;
+    }
+}
+
+@media (max-width: 720px) {
+    #loginPage {
+        margin-left: 0px;
+        margin-right: 0px;
+    }
+
+    #mapid {
+        height: 250px;
+        margin-top: 40px;
+    }
+
+    #ipData {
+        align-self: left;
+        font-size: smaller;
+    }
 }
