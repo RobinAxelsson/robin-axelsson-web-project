@@ -21,7 +21,7 @@ Added pages\
 Researched flexbox\
 Added JS for switching pages\
 Made pages responsive\
-Choosed API - location from IP
+Choose API - location from IP
 #
 Thursday 2021-02-18
 
@@ -29,9 +29,15 @@ Implemented API with location from IP-address.\
 Implemented Leaflet map with widgets.\
 Try to get hold of senior advisor\
 **end of day**\
-Input from senior: my Api is meeting custumers expectations.
+Input from senior: my Api is meeting customers expectations.
 #
 Thursday 2021-02-19
 
 **start of day**\
-Login service, 
+Login service,
+trial and error with okta
+
+**end of day**\
+Managed to embed Okta in my page with some rearrangement of the given method calls. Login and logout works but needs to be manually refreshed at the moment. This is marked as an ISSUE in GitHub. Could work by using an event from oktaLogin-object.
+
+Javascript starts to get long - session of refactoring and improving comments needed.
