@@ -31,7 +31,7 @@ Try to get hold of senior advisor\
 **end of day**\
 Input from senior: my Api is meeting customers expectations.
 #
-Thursday 2021-02-19
+Friday 2021-02-19
 
 **start of day**\
 Login service,
@@ -40,4 +40,11 @@ trial and error with okta
 **end of day**\
 Managed to embed Okta in my page with some rearrangement of the given method calls. Login and logout works but needs to be manually refreshed at the moment. This is marked as an ISSUE in GitHub. Could work by using an event from oktaLogin-object.
 
-Javascript starts to get long - session of refactoring and improving comments needed.
+JavaScript starts to get long - session of refactoring and improving comments needed.
+#
+Monday 2021-02-22
+
+Refactoring JavaScript to separate files
+Adding utility.js with good tools
+simplifying login-logout layout
+added some text information
