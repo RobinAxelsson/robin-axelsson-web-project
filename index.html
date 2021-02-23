@@ -6,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Auth-SPA-API Prototype</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css"
         integrity="sha512-xodZBNTC5n17Xt2atTPuE1HxjVMSvLVW9ocqUKLsCC5CXdbqCmblAshOMAS6/keqq/sMZMZ19scR4PsZChSR7A=="
         crossorigin="" />
@@ -54,12 +54,11 @@
                         however can’t be 100% precise, as it relies on an address that is usually being shuffled through
                         a few users of a certain area.
                     </p>
-                    <p style="font-weight: bold;">Login to find the home of your IP!
-                    </p>
+                    <p style="font-weight: bold;" id="dynamic-paragraph"></p>
                 </div>
             </div>
             <div class="page-section" id="okta-info">
-                <div class="okta-img-div">
+                <div id="okta-img-div">
                     <img src="images/oktaLock.svg" alt="An icon of a futuristic lock.">
                 </div>
                 <div class="text-item">
@@ -69,6 +68,9 @@
                     </p>
                     <p>
                         Okta is one trusted platform to secure every identity, from customers to your workforce. More than 9,400 organizations trust Okta’s software and APIs to sign in, authorize, and manage users.
+                    </p>
+                    <p style="font-weight: bold;">
+                        <a href="https://www.okta.com/">Read more at Okta.com</a>
                     </p>
                 </div>
             </div>
@@ -82,16 +84,17 @@
         <!-- AUTHOR -->
         <div class="page" id="authorPage">
             <div class="page-section">
-                <div id=>
+                <div id="author-image-div">
                     <img id="author-image" src="images/portrait-author-small.png"
                         alt="A portrait picture of the author">
                 </div>
                 <div class="flex-item">
                     <div class="text-item">
                         <h3 class="header">Author</h3>
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente inventore nesciunt numquam
-                            vitae
-                            tenetur veritatiss temporibus vero quae omnis laborum.</p>
+                        <p>The author of this project's name is Robin Axelsson. Robin does his second semester on the voccational school Teknikogskolan in Gothenburg as .NET developer. His interests are coding, sailing and lifting.</p>
+                        <p style="font-weight: bold;">
+                            <a href="https://www.linkedin.com/in/axelsson-robin/">Connect with me at Linkedin!</a>
+                        </p>
                     </div>
                 </div>
             </div>

@@ -32,8 +32,18 @@ body {
     align-items: center;
 }
 
+a:visited,
+a:link,
+a:active
+{
+    text-decoration: none;
+    color: var(--dark-accent-color);
+}
+
 a:hover {
     cursor: pointer;
+    color: var(--main-accent);
+    
 }
 
 p {
@@ -41,7 +51,9 @@ p {
     font-size: medium;
     color: var(--dark-accent-color);
 }
-
+h2 {
+    margin-bottom: 5px;
+}
 h3 {
     font-size: 25px;
     margin-bottom: 10px;
@@ -52,10 +64,18 @@ img {
     width: 100%;
 }
 
-.button {
+button {
     font-size: small;
-    border: 1px, 1px;
-    margin: 5px, 5px;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 6px;
+    color: var(--light-accent-color);
+    background-color: var(--dark-accent-color);
+}
+
+button:hover{
+    cursor: pointer;
+    background-color: var(--main-accent);
 }
 
 /*―――――――――――――――――――――*/
@@ -96,23 +116,32 @@ img {
 }
 
 #location-pin-div {
-    max-width: 400px;
-    margin: 50px;
-}
-
-#okta-img-div{
-    width:100%;
+    max-width: 350px;
+    padding: 50px;
     display: flex;
 }
+
+#okta-img-div {
+    width: 100%;
+    display: flex;
+    padding: 35px;
+    max-width: 350px;
+}
+
 .text-item {
     width: 100%;
     max-width: 45em;
-    padding: 30px 30px 30px 30px;
+    padding: 30px 30px 30px 0px;
     height: 100%;
 }
 
+#author-image-div {
+    max-width: 450px;
+    display: flex;
+    padding: 35px;
+}
+
 #author-image {
-    max-width: 600px;
     border-radius: var(--border-rad);
     margin-bottom: -4px;
 }
@@ -163,24 +192,22 @@ img {
     flex-direction: column;
     flex-flow: column;
 }
-#map-frame{
+
+#map-frame {
     overflow: hidden;
     display: flex;
     justify-content: center;
     align-items: center;
     width: 100%;
 }
+
 #mapid {
     height: 500px;
-    /* width: 1400px; */
     width: 1200px;
-    /* margin: 60px; */
-    /* align-self: center; */
     border-radius: var(--border-rad);
 }
 
 #ipData {
-    /* align-self: left; */
     font-size: smaller;
     display: flex;
     flex-direction: column;
@@ -195,29 +222,42 @@ img {
 
     .page-section {
         flex-flow: column;
+        justify-content: center;
+        align-items: center;
         width: 95%;
     }
 
     #location-pin-div {
         max-width: 300px;
-        margin-top: 20px;
+        padding: 20px;
+        min-width: 120px;
+    }
+
+    #okta-img-div {
+        padding: 20px;
+        max-width: 300px;
         min-width: 120px;
     }
 
     #author-text {
         max-width: 530px;
     }
-    #author-image{
-        margin-bottom: 20px;
-    }
+
     #ipData {
         align-self: left;
         font-size: smaller;
         display: flex;
         flex-direction: column;
     }
+
     #map-frame {
         height: 200px;
+    }
+
+    .text-item {
+        max-width: 400px;
+        font-size: small;
+        padding: 0px 15px 10px 15px;
     }
 }
 
@@ -234,21 +274,29 @@ img {
     #loginAddress {
         font-size: x-small;
     }
+
     h3 {
         font-size: smaller;
     }
+
     p {
         font-size: smaller;
     }
+
     #map-frame {
         height: 200px;
     }
-    .page-section{
+
+    .page-section {
         margin: 5px 5px 5px 5px;
     }
+
     .text-item {
-        padding: 10px 10px 10px 10px;
+        padding: 0px 15px 10px 15px;
+    }
+
+    a {
         font-size: x-small;
     }
-    
+
 }

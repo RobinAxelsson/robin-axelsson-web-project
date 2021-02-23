@@ -8,6 +8,9 @@ oktaSignIn = new OktaSignIn({
         issuer: 'https://dev-34426554.okta.com/oauth2/default',
         responseType: ['token', 'id_token'],
         display: 'page'
+    },
+    features: {
+        registration: true
     }
 });
 
@@ -16,8 +19,7 @@ oktaSignIn.session.get(function (res) {
         loginAddress.innerHTML = res.login;
         window.location.hash = '';
         loginMode();
-    }
-    else{
+    } else {
         defaultMode();
     }
 });
@@ -56,6 +58,7 @@ function signInAttempt() {
         });
     }
 }
+
 function signOut() {
     oktaSignIn.signOut();
     oktaSignIn.session.close();
