@@ -48,3 +48,20 @@ Refactoring JavaScript to separate files
 Adding utility.js with good tools
 simplifying login-logout layout
 added some text information
+
+#
+Tuesday 2021-02-22
+
+Refactoring javaScript\
+Renaming files\
+Commenting code\
+adding GitHub pages (in another repo)\
+https://robinaxelsson.github.io\
+All works well\
+added some additional error handling\
+Editing some last CSS\
+Added test-mode button to skip login\
+Left for tomorrow is:
+- checking CSS if comments needed
+- recording demo of web-app
+#
