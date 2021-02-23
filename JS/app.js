@@ -29,6 +29,7 @@ function loginMode(){
     let textBtn = select("#location-link");
     bindBtnPage(textBtn, locationPage);
     bindBtnFunc(textBtn, refreshMap);
+    select("#noLoginBtn").style.display = "none";
 }
 
 function defaultMode(){
@@ -39,4 +40,5 @@ function defaultMode(){
     var textBtn = select("#login-link");
     bindBtnPage(textBtn, loginPage);
     bindBtnFunc(textBtn, signInAttempt);
+    select("#noLoginBtn").style.display = "flex";
 }

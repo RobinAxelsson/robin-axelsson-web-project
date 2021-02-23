@@ -56,7 +56,7 @@ h2 {
 }
 h3 {
     font-size: 25px;
-    margin-bottom: 10px;
+    margin-bottom: 5px;
     color: var(--dark-accent-color);
 }
 
@@ -67,7 +67,7 @@ img {
 button {
     font-size: small;
     border: none;
-    padding: 5px 10px;
+    padding: 5px 5px;
     border-radius: 6px;
     color: var(--light-accent-color);
     background-color: var(--dark-accent-color);
@@ -103,7 +103,6 @@ button:hover{
 }
 
 .page-section {
-    /* overflow: hidden; */
     margin: 10px 10px 10px 10px;
     display: flex;
     flex-flow: row;
@@ -162,6 +161,7 @@ button:hover{
     display: flex;
     flex-direction: column;
     align-items: left;
+    justify-content: center;
     padding: 10px;
     padding-left: 20px;
 }
@@ -176,6 +176,8 @@ button:hover{
 
 #navContainer {
     display: flex;
+    flex-flow: wrap;
+    align-items: center;
 }
 
 .menuBtn {
@@ -184,6 +186,12 @@ button:hover{
     margin-right: 0.6em;
 }
 
+#noLoginBtn {
+    border: solid;
+    border-width: 1px;
+    align-self: center;
+    margin: 0px 0px 5px 0px;
+}
 /*―――――――――――――――――――――*/
 /* Location-page */
 /*―――――――――――――――――――――*/
@@ -259,6 +267,9 @@ button:hover{
         font-size: small;
         padding: 0px 15px 10px 15px;
     }
+    button {
+        font-size: small;
+    }
 }
 
 @media (max-width: 300px) {
@@ -298,5 +309,7 @@ button:hover{
     a {
         font-size: x-small;
     }
-
+    button {
+        font-size: x-small;
+    }
 }
