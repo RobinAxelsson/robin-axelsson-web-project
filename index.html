@@ -33,8 +33,10 @@
         <div id='loginAddress'></div>
     </nav>
 
-    <!-- START -->
+    <!-- As this is a single page application navigation is dynamically done with javascript changing the style="display: none;" inside code, this has the consequence that the login service only identifies the user but can't truly restrict user access. -->
     <div id="page-container">
+
+        <!-- Start Page -->
         <div class="page" id="startPage">
             <div class="page-section">
                 <div id="location-pin-div">
@@ -80,12 +82,12 @@
             </div>
         </div>
 
-        <!-- LOGIN -->
+        <!-- Okta Identification - gets rendered dynamically at login - hidden at page load-->
         <div class="page" id="loginPage">
             <div class="flex-item" id="okta-login-container"></div>
         </div>
 
-        <!-- AUTHOR -->
+        <!-- Author - hidden at page load -->
         <div class="page" id="authorPage">
             <div class="page-section">
                 <div id="author-image-div">
@@ -106,7 +108,7 @@
             </div>
         </div>
 
-        <!-- LOCATION -->
+        <!-- Location - renders the world map and exposing the ip-location api. - hidden at page load -->
         <div class="page" id="locationPage">
             <div class="page-section" id="locationPage">
                 <div class="flex-item" id="map-frame">
@@ -124,9 +126,9 @@
         </div>
     </div>
     <script src="JS/utility.js"></script>
-    <script src="JS/okta.js"></script>
-    <script src="JS/location.js"></script>
-    <script src="JS/app.js"></script>
+    <script src="JS/oktaID.js"></script>
+    <script src="JS/locationApi.js"></script>
+    <script src="JS/navigation.js"></script>
 </body>
 
 </html>
