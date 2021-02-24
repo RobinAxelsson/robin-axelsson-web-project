@@ -17,7 +17,7 @@ oktaSignIn = new OktaSignIn({   //the oktaSignIn-object contains all the functio
     }
 }); 
 
-oktaSignIn.session.get(function (res) {      //Checks the login status at every page load and picks mode accordingly.
+oktaSignIn.session.get(function (res) {      //Checks the login status at every page load and adjusts mode accordingly.
     if (res.status === 'ACTIVE') {
         loginAddress.innerHTML = res.login;
         window.location.hash = '';

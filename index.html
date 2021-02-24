@@ -44,7 +44,7 @@
                 </div>
                 <div class="text-item">
                     <h3 class="header">IP Geolocation</h3>
-                    <button id="noLoginBtn" onclick="loginMode()">Test Mode</button>
+                    <button id="testModeBtn" onclick="loginMode()">Test Mode</button>
                     <p>
                         Whenever you connect to the Internet you get a unique identifier for you or your network, called
                         an IP address. Usually ISPs (Internet Service Providers) have a certain range of IPs that they
@@ -112,14 +112,14 @@
         <div class="page" id="locationPage">
             <div class="page-section" id="locationPage">
                 <div class="flex-item" id="map-frame">
-                    <div id="mapid"></div>
+                    <div id="openStreetMap-container"></div>
                 </div>
                 <div class="flex-item">
-                    <div class="text-item" id="ipData">
-                        <h2 id="ip"></h2>
-                        <h2 id="lat"></h2>
-                        <h2 id="long"></h2>
-                        <button id="apiBtn" onclick="callApi()">Get Location</button>
+                    <div class="text-item" id="ipData-container">
+                        <h2 id="ip-address"></h2>
+                        <h2 id="latitude"></h2>
+                        <h2 id="longitude"></h2>
+                        <button id="getLocationBtn" onclick="getIpLocation()">Get Location</button>
                     </div>
                 </div>
             </div>

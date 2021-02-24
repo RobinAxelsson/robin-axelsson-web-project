@@ -2,7 +2,7 @@
 //Only code related to Location Page
 //general functions located in utility.
 
-const map = L.map('mapid', { //removes excess function from the map
+const map = L.map('openStreetMap-container', { //removes excess function from the map and renders it in the 
     zoomControl: false,
     dragging: false,
     touchZoom: false,
@@ -14,10 +14,10 @@ const map = L.map('mapid', { //removes excess function from the map
 
 map.setView([0, 0], 2); //0,0 longitude, latitude view with zoom value of 2
 
-const long = select("#long");
-const lat = select("#lat");
-const ipAddress = select("#ip");
-const mapDiv = select("#mapid");
+const long = select("#longitude");
+const lat = select("#latitude");
+const ipAddress = select("#ip-address");
+const mapDiv = select("#openStreetMap-container");
 
 const coordArrays = [];
 
@@ -31,22 +31,35 @@ tiles.addTo(map); //Tiles are the actual map images that is rendered in the map-
 
 function refreshMap() {
     map.invalidateSize();
-}   //This wrapper is needed to use bindBtnFunc(btn, func);
+} //This wrapper is needed to use bindBtnFunc(btn, func);
+
+function formatCoordinates(decimalMeasure) { //json coordinate input is in decimal format but gets converted to degrees-minutes-seconds
+    if (isNaN(decimalMeasure)) {
+        console.error('function parseDegMinSec() have NaN input');
+        return null;
+    } else {
+        let degrees = Math.floor(decimalMeasure);
+        let remainder = (decimalMeasure - degrees)*60;
+        console.log(remainder);
+        let minutes = Math.floor(remainder);
+        let seconds = Math.round((remainder-minutes)*60*10)/10;
+        return degrees + '°' + minutes + "'" + seconds + "\''";
+    }
+}
 
 
-
-//Following function is bound inline to #apiBtn in the location page, it updates both map and location data elements.
-async function callApi() {
+//Following function is bound inline to #getLocationBtn in the location page, it updates both map and location data elements.
+async function getIpLocation() {
     const response = await fetch("https://ipwhois.app/json/");
     const jObj = await response.json();
     let latlong = [jObj.latitude, jObj.longitude];
-    
-    long.innerHTML = "Longitude: " + roundDec(jObj.longitude);
-    lat.innerHTML = "Latitude: " + roundDec(jObj.latitude);
+
+    long.innerHTML = "Longitude: " + formatCoordinates(jObj.longitude);
+    lat.innerHTML = "Latitude: " + formatCoordinates(jObj.latitude);
     ipAddress.innerHTML = "IP-adress: " + jObj.ip;
-    
+
     map.setView(latlong, 12);
     L.marker(latlong).addTo(map);
 
-    select("#apiBtn").style.display = "none";
+    select("#getLocationBtn").style.display = "none";
 }

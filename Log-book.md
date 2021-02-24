@@ -50,7 +50,7 @@ simplifying login-logout layout
 added some text information
 
 #
-Tuesday 2021-02-22
+Tuesday 2021-02-23
 
 Refactoring javaScript\
 Renaming files\
@@ -65,3 +65,10 @@ Left for tomorrow is:
 - checking CSS if comments needed
 - recording demo of web-app
 #
+Wednesday 2021-02-24
+
+**start of day**\
+Look up requirements for video recording\
+Record and zip all files to publication in ping-pong\
+
+renamed and commented some more and added a formatter for the coordinates from api.

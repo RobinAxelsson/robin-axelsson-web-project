@@ -55,12 +55,3 @@ function jumpToPage(page) {
         page.style.display = "flex";
     }
 }
-
-function roundDec(float) {      //used to round location coordinates
-    if (isNaN(float)) {
-        console.error('function roundDec have wrong input');
-        return null;
-    } else {
-        return Math.round(float * 100) / 100;
-    }
-}

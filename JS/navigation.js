@@ -28,7 +28,7 @@ function loginMode() {
     loginBtn.style.display = "none";
     locationBtn.style.display = "flex";
     logoutBtn.style.display = "flex";
-    select("#noLoginBtn").style.display = "none"; //removes the excess functionality elements, and adds new functionality elements
+    select("#testModeBtn").style.display = "none"; //removes the excess functionality elements, and adds new functionality elements
 
     dynamicParagraph.innerHTML = `<a id="location-link">Go to location to find the home of your IP!</a>`;
     let textBtn = select("#location-link");
@@ -40,7 +40,7 @@ function defaultMode() {
     loginBtn.style.display = "flex";
     locationBtn.style.display = "none";
     logoutBtn.style.display = "none";
-    select("#noLoginBtn").style.display = "flex"; //removes the excess functionality elements, and adds new functionality elements
+    select("#testModeBtn").style.display = "flex"; //removes the excess functionality elements, and adds new functionality elements
 
     dynamicParagraph.innerHTML = `<a id="login-link">Login to find the home of your IP!</a>`
     var textBtn = select("#login-link");

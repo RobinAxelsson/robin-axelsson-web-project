@@ -2,7 +2,7 @@
 /* Variables */
 /*―――――――――――――――――――――*/
 :root {
-    --main-accent: #fc575e;
+    --emphasis-accent: #fc575e;
     --light-accent-color: #f5f0f0;
     --dark-accent-color: #333;
     --main-grey: #555;
@@ -42,7 +42,7 @@ a:active
 
 a:hover {
     cursor: pointer;
-    color: var(--main-accent);
+    color: var(--emphasis-accent);
     
 }
 
@@ -75,7 +75,7 @@ button {
 
 button:hover{
     cursor: pointer;
-    background-color: var(--main-accent);
+    background-color: var(--emphasis-accent);
 }
 
 /*―――――――――――――――――――――*/
@@ -108,7 +108,7 @@ button:hover{
     flex-flow: row;
     align-items: center;
     justify-content: center;
-    background: white;
+    background: var(--light-accent-color);
     border-radius: var(--border-rad);
     box-shadow: 0px 0px 6px var(--main-grey);
     max-width: 1200px;
@@ -170,7 +170,6 @@ button:hover{
 #loginAddress {
     color: var(--light-accent-color);
     width: 100%;
-    color: var(--light-accent-color);
     margin-top: 0.1em;
 }
 
@@ -186,7 +185,7 @@ button:hover{
     margin-right: 0.6em;
 }
 
-#noLoginBtn {
+#testModeBtn {
     border: solid;
     border-width: 1px;
     align-self: center;
@@ -209,13 +208,13 @@ button:hover{
     width: 100%;
 }
 
-#mapid {
+#openStreetMap-container {
     height: 500px;
     width: 1200px;
     border-radius: var(--border-rad);
 }
 
-#ipData {
+#ipData-container {
     font-size: smaller;
     display: flex;
     flex-direction: column;
