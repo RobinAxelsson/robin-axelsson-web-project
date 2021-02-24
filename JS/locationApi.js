@@ -33,33 +33,71 @@ function refreshMap() {
     map.invalidateSize();
 } //This wrapper is needed to use bindBtnFunc(btn, func);
 
-function formatCoordinates(decimalMeasure) { //json coordinate input is in decimal format but gets converted to degrees-minutes-seconds
-    if (isNaN(decimalMeasure)) {
-        console.error('function parseDegMinSec() have NaN input');
-        return null;
-    } else {
-        let degrees = Math.floor(decimalMeasure);
-        let remainder = (decimalMeasure - degrees)*60;
-        console.log(remainder);
-        let minutes = Math.floor(remainder);
-        let seconds = Math.round((remainder-minutes)*60*10)/10;
-        return degrees + '°' + minutes + "'" + seconds + "\''";
-    }
-}
-
-
 //Following function is bound inline to #getLocationBtn in the location page, it updates both map and location data elements.
 async function getIpLocation() {
     const response = await fetch("https://ipwhois.app/json/");
     const jObj = await response.json();
     let latlong = [jObj.latitude, jObj.longitude];
 
-    long.innerHTML = "Longitude: " + formatCoordinates(jObj.longitude);
-    lat.innerHTML = "Latitude: " + formatCoordinates(jObj.latitude);
+    long.innerHTML = "Longitude: " + formatCoordinates(jObj.longitude) + longitudeSuffix(jObj.longitude);
+    lat.innerHTML = "Latitude: " + formatCoordinates(jObj.latitude) + latitudeSuffix(jObj.latitude);
     ipAddress.innerHTML = "IP-adress: " + jObj.ip;
 
     map.setView(latlong, 12);
     L.marker(latlong).addTo(map);
 
     select("#getLocationBtn").style.display = "none";
+}
+
+function latitudeSuffix(lat) { //checks data-validity and adds the North or South (latitude span is +-90 degrees)
+    if (lat >= 0 && lat <= 90) {
+        return 'N';
+    }
+    else if (lat < 0 && lat >= -90){
+        return 'S';
+    }
+    else{
+        console.error("latitude is out of bounce: " + lat);
+    }
+}
+
+function longitudeSuffix(long) { //checks data-validity and adds the East or West (longitude span is +-180 degrees)
+    if (long >= 0 && long <= 180) {
+        return 'E';
+    }
+    else if (long < 0 && long >= -180){
+        return 'W';
+    }
+    else{
+        console.error("longitude is out of bounce: " + long);
+    }
+}
+
+function twoDigits(value) { //asures a clean layout of coordinates
+    if (value < 10 && value >= 0) {
+        return '0' + value;
+    } else if (value < 0 && value > -10) {
+        return '-0' + (value * -1);
+    } else {
+        return value;
+    }
+}
+
+
+function formatCoordinates(decimalMeasure) { //json coordinate input is in decimal format but following converts it to degrees-minutes-seconds
+    if (isNaN(decimalMeasure)) {
+        console.error('function parseDegMinSec() have NaN input');
+        return null;
+    } else {
+        if(decimalMeasure < 0){
+            decimalMeasure *= -1;
+        }
+        let degrees = Math.floor(decimalMeasure);
+        let remainder = (decimalMeasure - degrees) * 60;
+        console.log(remainder);
+        let minutes = Math.floor(remainder);
+        let seconds = Math.round((remainder - minutes) * 60 * 10) / 10;
+
+        return twoDigits(degrees) + '°' + twoDigits(minutes) + "'" + twoDigits(seconds) + "\''";
+    }
 }
