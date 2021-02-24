@@ -6,6 +6,13 @@ Look up requirements for video recording\
 Record and zip all files to publication in ping-pong\
 
 renamed and commented some more and added a formatter for the coordinates from api.
+Reread the specifications and made some final adjustments to the source code.
+
+**end of day**\
+Final commit/push with source code to github.
+Last documentation in progress and is published elsewhere.
+Video documentation with or without text in progress.
+
 #
 Tuesday 2021-02-23
 
